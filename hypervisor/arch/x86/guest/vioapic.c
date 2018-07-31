@@ -540,6 +540,8 @@ vioapic_reset(struct vioapic *vioapic)
 	for (pin = 0U; pin < pincount; pin++) {
 		vioapic->rtbl[pin].full = MASK_ALL_INTERRUPTS;
 	}
+	vioapic->id = 0;
+	vioapic->ioregsel = 0;
 }
 
 struct vioapic *
